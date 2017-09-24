@@ -1,0 +1,301 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SERCA</title>
+    <!-- Stylesheet -->
+    <link href="{% static 'home.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+  	<div id="particles-js"></div>
+
+	<section class="hero is-black">
+		<div class="hero-body">
+			<div class="container">
+				<a href="/"><i class="chevron" data-feather="home"></i></a>
+				<h1 class="title">
+					<span class="typeit"></span>
+				</h1>
+				<h2 class="subtitle">
+				codenamed <b>SERCA</b> <i data-feather="cpu"></i>
+				</h2>
+			</div>
+		</div>
+	</section>
+
+	<br>
+
+	<div class="columns">
+     	<div class="column is-half is-offset-one-quarter">
+
+     		<h1 class="title">Biographical details</h1>
+
+     		<div class="box">
+
+     			<div class="field">
+				  <label class="label">Your name</label>
+				  <div class="control">
+				    <input class="input" type="text">
+				  </div>
+				  <p class="help">This is only for reference, your identity will be reported as anonymous</p>
+				</div>
+
+				<div class="field is-grouped is-grouped-centered">
+	     			<div class="field">
+					  <label class="label">Location</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Annual Income</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">No. of occupants</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+				</div>
+
+				<div class="field is-grouped is-grouped-centered">
+	     			<div class="field">
+					  <label class="label">Electricity expense</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Water expense</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Source of electricity</label>
+					  <p class="control">
+					    <span class="select is-fullwidth">
+					      <select>
+					        <option selected>TNEB</option>
+					        <option>Solar</option>
+					        <option>Not sure</option>
+					      </select>
+					    </span>
+					  </p>
+					</div>
+				</div>
+
+     		</div>
+
+     		<h1 class="title">House structure</h1>
+
+     		<div class="box">
+
+     			<div class="field">
+				  <label class="label">No. of rooms</label>
+				  <div class="control">
+				    <input class="input" type="text">
+				  </div>
+				  <p class="help">This is only for reference, your identity will be reported as anonymous</p>
+				</div>
+
+				<div class="field is-grouped is-grouped-centered">
+	     			<div class="field">
+					  <label class="label">No. of lights</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">No. of fans</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">No. of TVs</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+				</div>
+
+				<div class="field is-grouped is-grouped-centered">
+	     			<div class="field">
+					  <label class="label">No. of refrigerators</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Washing machines</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">No. of ACs</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+				</div>
+
+     		</div>
+
+
+     		<h1 class="title">Average water consumption</h1>
+     		<h2 class="subtitle">(in Litres) per day</h2>
+     		<div class="box">
+
+     			<div class="field is-grouped is-grouped-centered">
+	     			<div class="field">
+					  <label class="label">Shower</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Restroom usage</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Face/body wash</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+				</div>
+
+				<div class="field is-grouped is-grouped-centered">
+	     			<div class="field">
+					  <label class="label">Washing dishes</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Drinking water</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Sanitisation of house</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					  <p class="help">Such as mopping</p>
+					</div>
+				</div>
+
+				<div class="field">
+					  <label class="label">Gardening</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					</div>
+					<p class="help">In case of a Garden</p>
+				</div>
+
+			<h1 class="title">Average Electricity Consumption</h1>
+     		<h2 class="subtitle">(average Electricity Units) per day</h2>
+     		<div class="box">
+
+     			<div class="field is-grouped is-grouped-centered">
+	     			<div class="field">
+					  <label class="label">The essentials</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					  <p class="help">Lights, Fans, Air-Conditioners</p>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Portable electronics</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					  <p class="help">TVs, PCs/Laptops/Mobiles, Routers/Modems</p>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Motored electronics</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					  <p class="help">Refrigerator, Dish-Washer, Washing Machine, Heater, Vacuum Cleaner</p>
+					</div>
+				</div>
+
+				<div class="field is-grouped is-grouped-centered">
+	     			<div class="field">
+					  <label class="label">Kitchen appliances</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					  <p class="help">Stove, Microwave Oven, Mixer, Toaster</p>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="field">
+					  <label class="label">Personal Appliances</label>
+					  <div class="control">
+					    <input class="input" type="text">
+					  </div>
+					  <p class="help">Personal Appliances (Hair Dryer, Vacuum Cleaner)</p>
+					</div>
+				</div>
+
+     		</div>
+
+     		<a href="/graph" class="button is-danger bd-rainbow is-medium is-pulled-right shadow">Do the <b>&nbsp;magic!&nbsp;<i class="chevron" data-feather="zap"></i></b></a>
+
+     	</div>
+     </div>
+   <br><br>
+
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 
+	<script src="{% static 'typeit.js' %}"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+	<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+	<script src="{% static 'particle.js' %}"></script>
+	<script>
+		$('.typeit').typeIt({
+			strings: ["Here's the output", "And I'll do the rest of the work :D"],
+			breakLines: false,
+		});
+		window.sr = ScrollReveal({reset: true, viewFactor: 0.05,});
+		feather.replace();
+		sr.reveal('.typeit');
+		$('.typeit2').typeIt();
+		particlesJS.load('particles-js', '{% static 'particle.json' %}', function() {
+		  console.log('callback - particles.js config loaded');
+		});
+	</script>
+
+  </body>
+
+</html>

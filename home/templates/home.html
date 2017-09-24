@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SERCA</title>
+    <!-- Stylesheet -->
+    <link href="{% static 'home.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+
+	<section class="hero is-black is-fullheight">
+		<div class="hero-body with-custom-background" style="background:url('{% static 'home.jpg' %}')">
+			<div class="container">
+				<h1 class="title">
+					<span class="typeit"></span>
+				</h1>
+				<h2 class="subtitle">
+				codenamed <b>SERCA</b> <i data-feather="cpu"></i>
+				</h2>
+				<a href="/form" class="button is-light is-medium">Get my <b>&nbsp;report</b>&nbsp;<i class="chevron" data-feather="chevron-right"></i></a>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 
+	<script src="{% static 'typeit.js' %}"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+	<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+	<script src="{% static 'particle.js' %}"></script>
+	<script>
+		$('.typeit').typeIt({
+			strings: ["Hello there!", "I'm your Smart Environmental Resource Conservation Assistant"],
+			breakLines: false,
+		});
+		window.sr = ScrollReveal({reset: true, viewFactor: 0.05,});
+		feather.replace();
+		sr.reveal('.typeit');
+		$('.typeit2').typeIt();
+		$(".button").click(function(){
+		    $(".button").addClass("is-loading");
+		});
+	</script>
+
+  </body>
+
+</html>
