@@ -10,11 +10,17 @@
     <!-- Stylesheet -->
     <link href="{% static 'home.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+    <link href="{% static 'font-awesome.css' %}" rel="stylesheet">
+    <script src="https://use.fontawesome.com/31db92fb18.js"></script>
+    <style>
+      body{
+        font-family: "Product Sans";
+      }
+    </style>
   </head>
-
   <body>
   	<div id="particles-js"></div>
-
 	<section class="hero is-black is-bold">
 		<div class="hero-body">
 			<div class="container">
@@ -28,36 +34,33 @@
 			</div>
 		</div>
 	</section>
-
   <section style="margin:30px">
     <div class="tile is-ancestor">
     <div class="tile is-vertical is-8">
       <div class="tile">
         <div class="tile is-parent is-vertical">
           <article class="tile is-child notification is-light is-bold">
-            <p class="title">Vertical...</p>
-            <p class="subtitle">Top tile</p>
-          </article>
-          <article class="tile is-child notification is-light is-bold">
-            <p class="title">...tiles</p>
-            <p class="subtitle">Bottom tile</p>
+            <p class="title"> Electricity Consumption </p>
+            <p class="subtitle"> Comparison Table </p>
+            <center><i class="fa fa-bolt fa-5x" aria-hidden="true"></i></center><br>
           </article>
         </div>
         <div class="tile is-parent">
           <article class="tile is-child notification is-light is-bold">
-            <p class="title">Middle tile</p>
-            <p class="subtitle">With an image</p>
-            <figure class="image is-4by3">
-              <img src="https://bulma.io/images/placeholders/640x480.png">
-            </figure>
+            <p class="title"> Water Consumption </p>
+            <p class="subtitle"> Comparison Table </p>
+            <br>
+            <center><span style="margin-top:10px"><i class="fa fa-tint fa-5x" aria-hidden="true"></i></center></span><br>
           </article>
         </div>
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-light is-bold">
-          <p class="title">Wide tile</p>
-          <p class="subtitle">Aligned with the right tile</p>
+          <p class="title"> Optimal Bill(s) </p>
+          <p class="subtitle"> </p>
           <div class="content">
+            Want to save money? Use these tips. 
+            <center><i class="fa fa-money fa-5x" aria-hidden="true"></i></center>
             <!-- Content -->
           </div>
         </article>
@@ -66,9 +69,11 @@
     <div class="tile is-parent">
       <article class="tile is-child notification is-light is-bold">
         <div class="content">
-          <p class="title">Tall tile</p>
-          <p class="subtitle">With even more content</p>
+          <p class="title"> Alternatives</p>
+          <p class="subtitle"> Follow these to conserve resources and help save the environment! </p>
           <div class="content">
+            <br>
+            <center><i class="fa fa-recycle fa-5x" aria-hidden="true"></i></center>
             <!-- Content -->
           </div>
         </div>
@@ -77,21 +82,10 @@
   </div>
   </section>
 
-
-	<!-- <center>
-		<div class="chart"></div>
-	</center>
-
-
-	<center>
-		<div class="chart2"></div>
-	</center> -->
-
 	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 
 	<script src="{% static 'typeit.js' %}"></script>
 	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	<script src="https://d3js.org/d3.v4.min.js"></script>
-
 	<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
 	<script src="{% static 'particle.js' %}"></script> 
 	<script>
@@ -106,139 +100,6 @@
 		particlesJS.load('particles-js', '{% static 'particle.json' %}', function() {
 		  console.log('callback - particles.js config loaded');
 		});
-
-/*var width = 960,
-    height = 136,
-    cellSize = 17;
-
-var formatPercent = d3.format(".1%");
-
-var color = d3.scaleQuantize()
-    .domain([-0.05, 0.05])
-    .range(["#a50026", "#d73027", "#f46d43", "#fdae61", "#fee08b", "#ffffbf", "#d9ef8b", "#a6d96a", "#66bd63", "#1a9850", "#006837"]);
-
-var svg = d3.select(".chart")
-  .selectAll("svg")
-  .data(d3.range(2017, 2018))
-  .enter().append("svg")
-    .attr("width", width)
-    .attr("height", height)
-  .append("g")
-    .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
-
-svg.append("text")
-    .attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
-    .attr("font-family", "sans-serif")
-    .attr("font-size", 10)
-    .attr("text-anchor", "middle")
-    .text(function(d) { return d; });
-
-var rect = svg.append("g")
-    .attr("fill", "none")
-    .attr("stroke", "#ccc")
-  .selectAll("rect")
-  .data(function(d) { return d3.timeDays(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
-  .enter().append("rect")
-    .attr("width", cellSize)
-    .attr("height", cellSize)
-    .attr("x", function(d) { return d3.timeWeek.count(d3.timeYear(d), d) * cellSize; })
-    .attr("y", function(d) { return d.getDay() * cellSize; })
-    .datum(d3.timeFormat("%Y-%m-%d"));
-
-svg.append("g")
-    .attr("fill", "none")
-    .attr("stroke", "#000")
-  .selectAll("path")
-  .data(function(d) { return d3.timeMonths(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
-  .enter().append("path")
-    .attr("d", pathMonth);
-
-d3.csv("dji.csv", function(error, csv) {
-  if (error) throw error;
-
-  var data = d3.nest()
-      .key(function(d) { return d.Date; })
-      .rollup(function(d) { return (d[0].Close - d[0].Open) / d[0].Open; })
-    .object(csv);
-
-  rect.filter(function(d) { return d in data; })
-      .attr("fill", function(d) { return color(data[d]); })
-    .append("title")
-      .text(function(d) { return d + ": " + formatPercent(data[d]); });
-});
-
-function pathMonth(t0) {
-  var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
-      d0 = t0.getDay(), w0 = d3.timeWeek.count(d3.timeYear(t0), t0),
-      d1 = t1.getDay(), w1 = d3.timeWeek.count(d3.timeYear(t1), t1);
-  return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
-      + "H" + w0 * cellSize + "V" + 7 * cellSize
-      + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
-      + "H" + (w1 + 1) * cellSize + "V" + 0
-      + "H" + (w0 + 1) * cellSize + "Z";
-}
-
-
-var svg = d3.select(".chart2"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
-
-var format = d3.format(",d");
-
-var color = d3.scaleOrdinal(d3.schemeCategory20c);
-
-var pack = d3.pack()
-    .size([width, height])
-    .padding(1.5);
-
-d3.csv("{% static 'flare.csv' %}", function(d) {
-  d.value = +d.value;
-  if (d.value) return d;
-}, function(error, classes) {
-  if (error) throw error;
-
-  var root = d3.hierarchy({children: classes})
-      .sum(function(d) { return d.value; })
-      .each(function(d) {
-        if (id = d.data.id) {
-          var id, i = id.lastIndexOf(".");
-          d.id = id;
-          d.package = id.slice(0, i);
-          d.class = id.slice(i + 1);
-        }
-      });
-
-  var node = svg.selectAll(".node")
-    .data(pack(root).leaves())
-    .enter().append("g")
-      .attr("class", "node")
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-
-  node.append("circle")
-      .attr("id", function(d) { return d.id; })
-      .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return color(d.package); });
-
-  node.append("clipPath")
-      .attr("id", function(d) { return "clip-" + d.id; })
-    .append("use")
-      .attr("xlink:href", function(d) { return "#" + d.id; });
-
-  node.append("text")
-      .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
-    .selectAll("tspan")
-    .data(function(d) { return d.class.split(/(?=[A-Z][^A-Z])/g); })
-    .enter().append("tspan")
-      .attr("x", 0)
-      .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
-      .text(function(d) { return d; });
-
-  node.append("title")
-      .text(function(d) { return d.id + "\n" + format(d.value); });
-}); */ 
-
 	</script> 
-
   </body>
-
 </html>
