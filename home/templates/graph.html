@@ -9,12 +9,13 @@
     <title>SERCA</title>
     <!-- Stylesheet -->
     <link href="{% static 'home.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
   </head>
 
   <body>
   	<div id="particles-js"></div>
 
-	<section class="hero is-black">
+	<section class="hero is-black is-bold">
 		<div class="hero-body">
 			<div class="container">
 				<a href="/"><i class="chevron" data-feather="home"></i></a>
@@ -28,14 +29,63 @@
 		</div>
 	</section>
 
-	<center>
+  <section style="margin:30px">
+    <div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+      <div class="tile">
+        <div class="tile is-parent is-vertical">
+          <article class="tile is-child notification is-light is-bold">
+            <p class="title">Vertical...</p>
+            <p class="subtitle">Top tile</p>
+          </article>
+          <article class="tile is-child notification is-light is-bold">
+            <p class="title">...tiles</p>
+            <p class="subtitle">Bottom tile</p>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-light is-bold">
+            <p class="title">Middle tile</p>
+            <p class="subtitle">With an image</p>
+            <figure class="image is-4by3">
+              <img src="https://bulma.io/images/placeholders/640x480.png">
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-light is-bold">
+          <p class="title">Wide tile</p>
+          <p class="subtitle">Aligned with the right tile</p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-light is-bold">
+        <div class="content">
+          <p class="title">Tall tile</p>
+          <p class="subtitle">With even more content</p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  </section>
+
+
+	<!-- <center>
 		<div class="chart"></div>
 	</center>
 
 
 	<center>
 		<div class="chart2"></div>
-	</center>
+	</center> -->
 
 	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 
 	<script src="{% static 'typeit.js' %}"></script>
@@ -43,7 +93,7 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 
 	<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-	<script src="{% static 'particle.js' %}"></script>
+	<script src="{% static 'particle.js' %}"></script> 
 	<script>
 		$('.typeit').typeIt({
 			strings: ["Here are your results"],
@@ -57,8 +107,7 @@
 		  console.log('callback - particles.js config loaded');
 		});
 
-
-var width = 960,
+/*var width = 960,
     height = 136,
     cellSize = 17;
 
@@ -186,9 +235,9 @@ d3.csv("{% static 'flare.csv' %}", function(d) {
 
   node.append("title")
       .text(function(d) { return d.id + "\n" + format(d.value); });
-});
+}); */ 
 
-	</script>
+	</script> 
 
   </body>
 

@@ -8,23 +8,42 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>SERCA</title>
     <!-- Stylesheet -->
-    <link href="{% static 'home.css' %}" rel="stylesheet">
+	<link href="{% static 'home.css' %}" rel="stylesheet"
+    <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+    <style>
+    	body{
+    		font-family: "Product Sans";
+    	}
+    	html, body {
+                margin:0;
+                padding:0;
+                height:100%;
+        }
+    </style>
   </head>
 
   <body>
-
-	<section class="hero is-black is-fullheight">
-		<div class="hero-body with-custom-background" style="background:url('{% static 'home.jpg' %}')">
-			<div class="container">
+  	<section class="hero is-light is-bold">
+	  <div class="hero-body">
+	      <h1 class="title">
+	        Software Engineering Project
+	      </h1>
+	      <h2 class="subtitle">
+	        By Vishhvak Srinivasan, 16BCE1269
+	      </h2>
+	  </div>
+	</section>
+	<section class="hero is-dark is-bold is-large" style="height:74%;padding-top:100px">
+			<div class="container" style="margin-left:250px">
 				<h1 class="title">
 					<span class="typeit"></span>
 				</h1>
 				<h2 class="subtitle">
 				codenamed <b>SERCA</b> <i data-feather="cpu"></i>
 				</h2>
-				<a href="/form" class="button is-light is-medium">Get my <b>&nbsp;report</b>&nbsp;<i class="chevron" data-feather="chevron-right"></i></a>
+				<a href="/form" class="button is-info bd-rainbow is-medium shadow">Get my <b>&nbsp;report</b>&nbsp;<i class="chevron" data-feather="chevron-right"></i></a>
+				
 			</div>
-		</div>
 	</section>
 
 	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 

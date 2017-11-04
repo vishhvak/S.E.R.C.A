@@ -9,12 +9,28 @@
     <title>SERCA</title>
     <!-- Stylesheet -->
     <link href="{% static 'home.css' %}" rel="stylesheet">
+    <!--<style>
+    html{
+    	background-color: #d16098;
+ 		background-image: linear-gradient(142deg, #f4a35b, #f4655b 31%, #d16098 65%, #ca3469);
+    }-->
+    <style>
+    	html{
+    		  animation: rainbow 8s ease infinite;
+			  background-image: linear-gradient(124deg, #ff470f, #ff3860, #b86bff, #3273dc);
+			  background-size: 800% 800%;
+			}
+		.title{
+			color:#ffffff;
+		}
+		.subtitle{
+			color:#ffffff;
+		}
+	</style>
   </head>
-
   <body>
   	<div id="particles-js"></div>
-
-	<section class="hero is-black">
+	<section class="hero is-black is-bold">
 		<div class="hero-body">
 			<div class="container">
 				<a href="/"><i class="chevron" data-feather="home"></i></a>
@@ -161,9 +177,8 @@
 
 
      		<h1 class="title">Average water consumption</h1>
-     		<h2 class="subtitle">(in Litres) per day</h2>
+     		<h2 class="subtitle">(Avg No. of Times a day)</h2>
      		<div class="box">
-
      			<div class="field is-grouped is-grouped-centered">
 	     			<div class="field">
 					  <label class="label">Shower</label>
@@ -173,7 +188,7 @@
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
-					  <label class="label">Restroom usage</label>
+					  <label class="label">Restroom usage </label>
 					  <div class="control">
 					    <input class="input" type="text">
 					  </div>
@@ -221,7 +236,7 @@
 				</div>
 
 			<h1 class="title">Average Electricity Consumption</h1>
-     		<h2 class="subtitle">(average Electricity Units) per day</h2>
+     		<h2 class="subtitle">(average Time spent per day)</h2>
      		<div class="box">
 
      			<div class="field is-grouped is-grouped-centered">
@@ -270,7 +285,7 @@
 
      		</div>
 
-     		<a href="/graph" class="button is-danger bd-rainbow is-medium is-pulled-right shadow">Do the <b>&nbsp;magic!&nbsp;<i class="chevron" data-feather="zap"></i></b></a>
+     		<a href="/graph" class="button is-medium is-pulled-right shadow" style="background-image:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);"> Do the <b>&nbsp;magic!&nbsp;<i class="chevron" data-feather="zap"></i></b></a>
 
      	</div>
      </div>

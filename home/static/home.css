@@ -10200,3 +10200,7 @@ canvas.particles-js-canvas-el {
     background-position: 1% 80%;
   }
 }
+
+.hero-body.shorten-top {
+        padding-top: -50px;
+      }
