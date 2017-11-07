@@ -52,10 +52,12 @@
 
      		<div class="box">
 
+     			<form method="post" action="/graph/">
+     				{% csrf_token %}
      			<div class="field">
 				  <label class="label">Your name</label>
 				  <div class="control">
-				    <input class="input" type="text">
+				    <input class="input" type="text" name="name">
 				  </div>
 				  <p class="help">This is only for reference, your identity will be reported as anonymous</p>
 				</div>
@@ -130,7 +132,7 @@
 	     			<div class="field">
 					  <label class="label">No. of lights</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="lights">
 					  </div>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
@@ -284,7 +286,9 @@
 
      		</div>
 
-     		<a href="/graph" class="button is-medium is-pulled-right shadow" style="background-image:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);"> Do the <b>&nbsp;magic!&nbsp;<i class="chevron" data-feather="zap"></i></b></a>
+     		<input type="submit" class="button is-medium is-pulled-right shadow" value="submit" style="background-image:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);"/>
+
+     	</form>
 
      	</div>
      </div>
