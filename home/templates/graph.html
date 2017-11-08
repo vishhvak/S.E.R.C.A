@@ -40,49 +40,47 @@
       <div class="tile">
         <div class="tile is-parent is-vertical">
           <article class="tile is-child notification is-light is-bold">
-            <p class="title"> Electricity Consumption </p>
+            <p class="title">Electricity Usage <i class="fa fa-bolt" aria-hidden="true"></i></p>
             <p class="subtitle"> Comparison Table </p>
             
             <table class="table">
               <thead>
-                <tr><td>Lights</td><td>{{ lights }}</td></tr>
-                <tr><td>Fans</td><td>Value</td></tr>
-                <tr><td>TVs</td><td>Value</td></tr>
-                <tr><td>ACs</td><td>Value</td></tr>
-                <tr><td>PCs</td><td>Value</td></tr>
-                <tr><td>Laptops</td><td>Value</td></tr>
-                <tr><td>Mobiles</td><td>Value</td></tr>
-                <tr><td>Refrigerators</td><td>Value</td></tr>
-                <tr><td>Dishwasher</td><td>Value</td></tr>
-                <tr><td>Washing Machine</td><td>Value</td></tr>
-                <tr><td>Stove</td><td>Value</td></tr>
-                <tr><td>Microwave Oven</td><td>Value</td></tr>
-                <tr><td>Hair Dryer</td><td>Value</td></tr>
+                <tr>
+                  <th>Appliance</th>
+                  <th>User Usage</th>
+                  <th>Average Usage</th>
+                </tr>
+                <tr><td>Lights</td><td>{{ lights }}</td><td>{{ lights }}</td></tr>
+                <tr><td>Fans</td><td>Value</td><td>{{ lights }}</td></tr>
+                <tr><td>TVs</td><td>Value</td><td>{{ lights }}</td></tr>
+                <tr><td>ACs</td><td>Value</td><td>{{ lights }}</td></tr>
+                <tr><td>Refrigerators</td><td>Value</td><td>{{ lights }}</td></tr>
               </thead>
             </table>
-
-            <center><i class="fa fa-bolt fa-5x" aria-hidden="true"></i></center><br>
           </article>
         </div>
         <div class="tile is-parent">
           <article class="tile is-child notification is-light is-bold">
-            <p class="title"> Water Consumption </p>
+            <p class="title"> Water Consumption  <i class="fa fa-tint" aria-hidden="true"></i></p>
+
             <p class="subtitle"> Comparison Table </p>
             <br>
-            <center><span style="margin-top:10px"><i class="fa fa-tint fa-5x" aria-hidden="true"></i></center></span><br>
-
              <table class="table">
               <thead>
-                <tr><td>Shower</td><td>Value</td></tr>
-                <tr><td>Restroom Usage</td><td>Value</td></tr>
-                <tr><td>Face/Body Wash</td><td>Value</td></tr>
-                <tr><td>Washing Dishes</td><td>Value</td></tr>
-                <tr><td>Drinking Water</td><td>Value</td></tr>
-                <tr><td>Sanitisation of House</td><td>Value</td></tr>
-                <tr><td>Gardening</td><td>Value</td></tr>
+                <tr>
+                  <th>Activity</th>
+                  <th>User Usage</th>
+                  <th>Average Usage</th>
+                </tr>
+                <tr><td>Shower</td><td>{{ lights }}</td><td>{{ lights }}</td></tr>
+                <tr><td>Restroom Usage</td><td>Value</td><td>{{ lights }}</td></tr>
+                <tr><td>Face/Body Wash</td><td>Value</td><td>{{ lights }}</td></tr>
+                <tr><td>Washing Dishes</td><td>Value</td><td>{{ lights }}</td></tr>
+                <tr><td>Drinking Water</td><td>Value</td><td>{{ lights }}</td></tr>
+                <tr><td>Dishwasher</td><td>Value</td><td>{{ lights }}</td></tr>
+                <tr><td>Washing Machine</td><td>Value</td><td>{{ lights }}</td></tr>
               </thead>
             </table>
-
           </article>
         </div>
       </div>

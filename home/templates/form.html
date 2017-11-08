@@ -47,11 +47,8 @@
 
 	<div class="columns">
      	<div class="column is-half is-offset-one-quarter">
-
      		<h1 class="title">Biographical details</h1>
-
      		<div class="box">
-
      			<form method="post" action="/graph/">
      				{% csrf_token %}
      			<div class="field">
@@ -105,7 +102,7 @@
 					  <p class="control">
 					    <span class="select is-fullwidth">
 					      <select>
-					        <option selected>TNEB</option>
+					        <option selected>US Average ($0.12/KWh)</option>
 					        <option>Solar</option>
 					        <option>Not sure</option>
 					      </select>
@@ -117,9 +114,7 @@
      		</div>
 
      		<h1 class="title">House structure</h1>
-
      		<div class="box">
-
      			<div class="field">
 				  <label class="label">No. of rooms</label>
 				  <div class="control">
@@ -139,14 +134,14 @@
 					<div class="field">
 					  <label class="label">No. of fans</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="fans">
 					  </div>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
 					  <label class="label">No. of TVs</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="TV">
 					  </div>
 					</div>
 				</div>
@@ -155,27 +150,26 @@
 	     			<div class="field">
 					  <label class="label">No. of refrigerators</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="fridge">
 					  </div>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
 					  <label class="label">Washing machines</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="wash">
 					  </div>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
 					  <label class="label">No. of ACs</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="AC">
 					  </div>
 					</div>
 				</div>
 
      		</div>
-
 
      		<h1 class="title">Average water consumption</h1>
      		<h2 class="subtitle">(Avg No. of Times a day)</h2>
@@ -184,103 +178,93 @@
 	     			<div class="field">
 					  <label class="label">Shower</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="shower">
 					  </div>
+					  <p class="help">Approx. Time Spent in the Shower</p>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
 					  <label class="label">Restroom usage </label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="rest">
 					  </div>
+					  <p class="help">How often do you use the restroom?</p>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
 					  <label class="label">Face/body wash</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="fresh">
 					  </div>
+					  <p class="help">How many times do you freshen up?</p>
 					</div>
 				</div>
+
 
 				<div class="field is-grouped is-grouped-centered">
 	     			<div class="field">
 					  <label class="label">Washing dishes</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="washdish">
 					  </div>
+					  <p class="help">How many times do you wash dishes?</p>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
 					  <label class="label">Drinking water</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="drink">
 					  </div>
-					</div>
-					&nbsp;&nbsp;&nbsp;&nbsp;
-					<div class="field">
-					  <label class="label">Sanitisation of house</label>
-					  <div class="control">
-					    <input class="input" type="text">
-					  </div>
-					  <p class="help">Such as mopping</p>
+					  <p class="help">Frequency of consuming water</p>
 					</div>
 				</div>
-
-				<div class="field">
-					  <label class="label">Gardening</label>
-					  <div class="control">
-					    <input class="input" type="text">
-					  </div>
-					</div>
-					<p class="help">In case of a Garden</p>
-				</div>
+			</div>
 
 			<h1 class="title">Average Electricity Consumption</h1>
-     		<h2 class="subtitle">(average Time spent per day)</h2>
+     		<h2 class="subtitle">(average Time spent per appliance in day)</h2>
      		<div class="box">
 
      			<div class="field is-grouped is-grouped-centered">
 	     			<div class="field">
-					  <label class="label">The essentials</label>
+					  <label class="label">Lights</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="lightstime">
 					  </div>
-					  <p class="help">Lights, Fans, Air-Conditioners</p>
+					  <p class="help">How long do you keep lights on?</p>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
-					  <label class="label">Portable electronics</label>
+					  <label class="label">Fans</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="fantime">
 					  </div>
-					  <p class="help">TVs, PCs/Laptops/Mobiles, Routers/Modems</p>
+					  <p class="help">How long do you use fans?</p>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
-					  <label class="label">Motored electronics</label>
+					  <label class="label">TV</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="tvtime">
 					  </div>
-					  <p class="help">Refrigerator, Dish-Washer, Washing Machine, Heater, Vacuum Cleaner</p>
+					  <p class="help">How long does the TV run in your home?</p>
 					</div>
 				</div>
 
 				<div class="field is-grouped is-grouped-centered">
 	     			<div class="field">
-					  <label class="label">Kitchen appliances</label>
+					  <label class="label">Air Conditioner</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="ACtime">
 					  </div>
-					  <p class="help">Stove, Microwave Oven, Mixer, Toaster</p>
+					  <p class="help">Do you use the AC all the time?</p>
 					</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="field">
-					  <label class="label">Personal Appliances</label>
+					  <label class="label">Washing Machine</label>
 					  <div class="control">
-					    <input class="input" type="text">
+					    <input class="input" type="text" name="WMtime">
 					  </div>
-					  <p class="help">Personal Appliances (Hair Dryer, Vacuum Cleaner)</p>
+					  <p class="help">How long does your Washing Machine run for usually?</p>
 					</div>
 				</div>
 
