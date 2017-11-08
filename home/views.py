@@ -8,25 +8,41 @@ def form(request):
 
 def graph(request):
 	if request.method == 'POST':
-		lights = request.POST['lights']
-		fans = request.POST['fans']
-		TV = request.POST['TV']
-		fridge = request.POST['fridge']
-		wash = request.POST['wash']
-		AC = request.POST['AC']
-		shower = request.POST['shower']
-		rest = request.POST['rest']
-		fresh = request.POST['fresh']
-		washdish = request.POST['washdish']
-		drink = request.POST['drink']
-		lightstime = request.POST['lightstime']
-		fantime = request.POST['fantime']
-		tvtime = request.POST['tvtime']
-		ACtime = request.POST['ACtime']
-		WMtime = request.POST['WMtime']
+		lights = request.POST.get('lights', False);
+		fans = request.POST.get('fans', False);
+		TV = request.POST.get('TV', False);
+		fridge = request.POST.get('fridge', False);
+		wash = request.POST.get('wash', False);
+		AC = request.POST.get('AC', False);
+		shower = request.POST.get('shower', False);
+		rest = request.POST.get('rest', False);
+		fresh = request.POST.get('fresh', False);
+		washdish = request.POST.get('washdish', False);
+		drink = request.POST.get('drink', False);
+		lightstime = request.POST.get('lightstime', False);
+		fantime = request.POST.get('fantime', False);
+		tvtime = request.POST.get('tvtime', False);
+		ACtime = request.POST.get('ACTime', False);
+		WMtime = request.POST.get('WMTime', False);
 		if lights:
 			print(lights)
 		return render(request, 'graph.html', 
-			{'lights': lights} )
+			{'lights': lights,
+			 'fans': fans,
+			 'TV': TV,
+			 'fridge': fridge,
+			 'wash': wash,
+			 'AC': AC,
+			 'shower': shower,
+			 'rest': rest,
+			 'fresh': fresh,
+			 'washdish': washdish,
+			 'drink': drink,
+			 'lightstime': lightstime,
+			 'fantime': fantime,
+			 'tvtime': tvtime,
+			 'ACtime': ACtime,
+			 'WMtime': WMtime,
+			 } )
 	else:
 		return render(request, 'graph.html')
