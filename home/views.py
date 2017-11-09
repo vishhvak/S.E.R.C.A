@@ -25,6 +25,7 @@ def graph(request):
 		ACtime = request.POST.get('ACTime', False);
 		WMtime = request.POST.get('WMTime', False);
 		name = request.POST.get('name', False);
+		lights=lights*2;
 		if lights:
 			print(lights)
 		return render(request, 'graph.html', 
