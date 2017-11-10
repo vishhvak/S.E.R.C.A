@@ -24,6 +24,10 @@ def graph(request):
 		tvtime = request.POST.get('tvtime', False);
 		ACtime = request.POST.get('ACTime', False);
 		WMtime = request.POST.get('WMTime', False);
+		le = lights*lightstime
+		fe = fans*fantime
+		ace = AC*ACtime
+		wme = wash*WMtime
 		if lights:
 			print(lights)
 		return render(request, 'graph.html', 
@@ -43,6 +47,10 @@ def graph(request):
 			 'tvtime': tvtime,
 			 'ACtime': ACtime,
 			 'WMtime': WMtime,
+			 'le': le,
+			 'fe': fe,
+			 'ace': ace,
+			 'wme': wme,
 			 } )
 	else:
 		return render(request, 'graph.html')
