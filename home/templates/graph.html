@@ -49,11 +49,11 @@
                   <th>User Usage</th>
                   <th>Average Usage</th>
                 </tr>
-                <tr><td>Lights</td><td>{{ le }} kWh</td><td>300 kWh</td></tr>
-                <tr><td>Fans</td><td>{{ fe }} kWh</td><td>420 kWh</td></tr>
-                <tr><td>TVs</td><td>{{ tve }} kWh</td><td>410 kWh</td></tr>
-                <tr><td>ACs</td><td>{{ ace }} kWh</td><td>800 kWh</td></tr>
-                <tr><td>Refrigerators</td><td>{{ re }} kWh</td><td>4500 kWh</td></tr>
+                <tr><td>Lights</td><td>{{ le }} kWh</td><td>0.82 kWh</td></tr>
+                <tr><td>Fans</td><td>{{ fe }} kWh</td><td>1.15 kWh</td></tr>
+                <tr><td>TVs</td><td>{{ tve }} kWh</td><td>1.12 kWh</td></tr>
+                <tr><td>ACs</td><td>{{ ace }} kWh</td><td>2.19 kWh</td></tr>
+                <tr><td>Refrigerators</td><td>{{ re }} kWh</td><td>1.8 kWh</td></tr>
               </thead>
             </table>
           </article>
@@ -71,11 +71,11 @@
                   <th>User Usage</th>
                   <th>Average Usage</th>
                 </tr>
-                <tr><td>Shower</td><td>{{ shower }}</td><td>{{ lights }}</td></tr>
-                <tr><td>Restroom Usage</td><td>{{ rest }}</td><td>{{ lights }}</td></tr>
-                <tr><td>Face/Body Wash</td><td>{{ fresh }}</td><td>{{ lights }}</td></tr>
-                <tr><td>Washing Dishes</td><td>{{ washdish }}</td><td>{{ lights }}</td></tr>
-                <tr><td>Drinking Water</td><td>{{ drink }}</td><td>{{ lights }}</td></tr>
+                <tr><td>Shower</td><td>{{ shower }}</td><td>20</td></tr>
+                <tr><td>Restroom Usage</td><td>{{ rest }}</td><td>26</td></tr>
+                <tr><td>Face/Body Wash</td><td>{{ fresh }}</td><td>2.5</td></tr>
+                <tr><td>Washing Dishes</td><td>{{ washdish }}</td><td>12</td></tr>
+                <tr><td>Drinking Water</td><td>{{ drink }}</td><td>1</td></tr>
               </thead>
             </table>
           </article>
@@ -85,8 +85,11 @@
         <article class="tile is-child notification is-light is-bold">
           <p class="title"> Optimal Bill(s) <i class="fa fa-money" aria-hidden="true"></i> </p>
           <p class="subtitle"> Want to save money? Use these tips.  </p>
-          <div class="content">
+          <div class="content" style='font-size: 18px;'>
             <!-- Content -->
+            <p> 
+              Your current Electricty Bill: {{ elecbill }} &nbsp; &nbsp; Your current Water Bill: {{ waterbill }} </p>
+            <p>Average Electricty Bill: $110.21 &nbsp; &nbsp; Average Water Bill: $40.00 </p>  
           </div>
         </article>
       </div>
@@ -98,6 +101,15 @@
           <p class="subtitle"> Follow these to conserve resources and help save the environment! </p>
           <div class="content">
             <!-- Content -->
+            <ol style='font-size: 18px;'>
+              <li>It would more polite to consider others before wasting all the water.</li><br>
+              <li>The more meat we eat, the more animals there are that make the gases that create the greenhouse effect.</li><br>
+              <li>Before you throw a wrapper on the road, Think about where the rubbish ends up.</li><br>
+              <li>We all agree that riding a bicycle does not produce emissions and is to everyone’s advantage.</li><br>
+              <li>Energy-saving light bulbs use only a fifth of the energy conventional ones use.</li><br>
+              <li>We can take our shopping bags from home to do the shopping.</li><br>
+              <li>If animals can recycle, then so can we.</li>
+            </ol>
           </div>
         </div>
       </article>
